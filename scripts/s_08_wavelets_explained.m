@@ -25,10 +25,11 @@ plot(time, wavelet)
 set(gca, 'FontSize', 15)
 
 
-print('wavelet', '-djpeg', '-r100');
+print('../Figures/wavelet', '-djpeg', '-r100');
 
 
 %% plot how wavelet are really (with real and imaginary part).
+figure
 plot3(time, real(wavelet), imag(wavelet))
 rotate3d
 

@@ -5,14 +5,14 @@ close all
 
 srate = 500;
  
-% list so5me frequencies
+% list some frequencies
 frex = [10 10];
 
 % list some random amplitudes... make sure there are 
 % the same number of amplitudes as there are frequencies!
 amplit = [ 100 50 ];
 
-phases = [0 1/2*pi ]
+phases = [0 pi]
 
 % define time...
 time=0:1/srate:1;
@@ -36,7 +36,7 @@ end;
 
 
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 10 10])
-print('sine_waves_subplot', '-djpeg', '-r100');
+print('../Figures/s_01_sine_waves_subplot', '-djpeg', '-r100');
 
 
 %% overaly
@@ -50,8 +50,6 @@ set(gca, 'ylim', myylim,'fontsize',15);
 
 
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 10 5])
-print('sine_waves_overlay', '-djpeg', '-r100');
-
-print('Hilbert', '-djpeg', '-r100');
+print('../Figures/s_01_sine_waves_overlay', '-djpeg', '-r100');
 
 
